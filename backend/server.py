@@ -57,6 +57,8 @@ def signup():
 def login():
     email_id = request.json["email_id"]
     password = request.json["password"]
+    print(email_id)
+    print(password)
     flag = False
     cursor = mysql.connection.cursor()
     cursor.execute("""select * from users""")
@@ -162,6 +164,7 @@ def booking():
     cursor.close()
     return json.dumps("Booking Successfully")
 
+#For Showing booked Vehicle
 @app.route('/showbooking',methods=['POST'])
 def showbooking():
     user_id = request.headers.get('user_id')

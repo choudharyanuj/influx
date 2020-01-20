@@ -11,13 +11,13 @@ export default class Navigation extends Component {
                         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                         <Navbar.Collapse id="responsive-navbar-nav">
                             <Nav className="mr-auto">
-                                <Link className="nav-item nav-link text-white p-3" style={{ fontSize: "15px" }} to="/">Home</Link>
+                                <Link className="nav-item nav-link text-white p-3" style={{ fontSize: "15px" }} to="/home">Home</Link>
                             </Nav>
                             <Nav className="mr-auto w-25">
-                               <h1 className="offset-6  text-warning">E-Bazar</h1>
+                               <h1 className="offset-4 text-warning">ProHire</h1>
                             </Nav>
                             <Nav>
-                                <Link className="nav-item nav-link text-white p-3" style={{ fontSize: "15px" }} to="/cart">Bookings</Link>
+                                <Link className="nav-item nav-link text-white p-3" style={{ fontSize: "15px" }} to="/bookings">Bookings</Link>
                             </Nav>
                         </Navbar.Collapse>
                     </Navbar> 

@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import Axios from 'axios'
 import {Link} from 'react-router-dom'
+import Navbar from './navbar'
+
 export default class Details extends Component {
     constructor(props) {
         super(props)
@@ -68,6 +70,10 @@ export default class Details extends Component {
     render() {
         console.log(this.state.user_id)
         return (
+            <>
+            <div>
+                <Navbar/>
+            </div>``
             <div className="p-5">
                 <div className="row">
                     <div className="col-6"> 
@@ -80,12 +86,12 @@ export default class Details extends Component {
                             <h3> Vehicle Type: {this.state.allData.car_type}</h3>
                             <h3> Total Seats {this.state.allData.no_of_seats}</h3>
                             <h3> Color: {this.state.allData.car_color}</h3>
-                            {/* <Link to={`/buy/${this.state.allData.car_id}`}><button className="btn btn-primary m-3">Buy Now</button></Link> */}
                             <button className="btn btn-warning m-3" onClick={this.book}>Book Now</button>
                         </div>
                     </div>
                 </div>
             </div>
+            </>
         )
     }
 }

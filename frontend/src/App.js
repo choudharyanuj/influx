@@ -19,7 +19,7 @@ class App extends Component {
         <Route path="/signup" component={Signup}/>
         <Route path="/home" component={Home}/>
         <Route path="/details/:car_id" render={(props) => <Details {...props}/>}/>
-        <Route path="/cart" component={Showbookings}/>
+        <Route path="/bookings" component={Showbookings}/>
       </div>
     );
   }

@@ -33,7 +33,7 @@ export default class Login extends Component {
                 else{
                     alert("welcome")
                     window.localStorage.setItem("tokenuser", response.data)
-                    window.location.href ="/"
+                    window.location.href ="/home"
                 }
             })
             .catch((err) => alert(err))
@@ -53,7 +53,7 @@ export default class Login extends Component {
                             <div className=" offset-3 pt-5">
                                 <input name="email_id" type="email_id" placeholder="Email_id Id" className="rounded-pill form-control w-75" onChange={this.handleChange}></input><br></br>
                                 <input name="password" type="password" placeholder="Password" className="rounded-pill form-control w-75" onChange={this.handleChange}></input><br></br>
-                               <Link to="/home"><button className="rounded-pill bg-success form-control w-75"><h5 className="text-light">Login</h5></button></Link> 
+                               <button className="rounded-pill bg-success form-control w-75"><h5 className="text-light">Login</h5></button>
                             </div>
                             <div className="text-center mt-3">
                                 <Link to="/signup"><p>Create New account</p></Link>
